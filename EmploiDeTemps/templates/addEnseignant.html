@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Ajouter un enseignant</h2>
+<form method='post' action="{{ url_for('addEnseignant') }}">
+    {{ form.hidden_tag() }}
+    <p>
+        {{ form.matricule.label }}<br>
+        {{ form.matricule(size=32) }}
+    </p>
+    <p>
+        {{ form.nom.label }}<br>
+        {{ form.nom(size=32) }}
+    </p>
+    <p>
+        {{ form.prenom.label }}<br>
+        {{ form.prenom(size=32) }}
+    </p>
+    <p>
+        {{ form.datenaissance.label }}<br>
+        {{ form.datenaissance(size=32) }}
+    </p>
+    <p>
+        {{ form.heurecourssemaines.label }}<br>
+        {{ form.heurecourssemaines(size=32) }}
+    </p>
+    <p>
+        {{ form.status.label }}<br>
+        {{ form.status(size=32) }}
+    </p>
+    
+    <p>
+        <button type="submit"> Valider</button>
+    </p>
+</form>
+{% endblock %}

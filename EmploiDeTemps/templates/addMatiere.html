@@ -1,0 +1,17 @@
+{%extends 'base.html'%}
+{%block content%}
+<h2>Ajouter une Matiere</h2>
+<form method='post' action="{{ url_for('addMatiere') }}">
+    {{ form.hidden_tag() }}
+    <p>
+        {{form.id.label}}<br>
+        {{form.id()}}
+    </p>
+    <p>
+        {{form.intitule.label}}<br>
+        {{form.intitule(size=32)}}
+    </p>
+    <p>
+        <button type="submit"> Valider </button>
+    </p>
+{%endblock %}

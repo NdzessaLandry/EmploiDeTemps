@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>Administration</h1>
+  <h3>Bienvenue M. {{data}}</h3>
+  <ul>
+    <li><a href="{{ url_for('addEnseignant') }}">Ajouter un enseignant</a></li>
+    <li><a href="{{ url_for('addClasse') }}">Ajouter une salle de classe</a></li>
+    <li><a href="{{ url_for('addMatiere') }}">Ajouter une Matiere</a></li>
+    <li><a href="{{ url_for('manager') }}">Manager La salle de classe</a></li>
+  </ul>
+{% endblock %}
